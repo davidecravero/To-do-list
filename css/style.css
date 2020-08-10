@@ -4,3 +4,4 @@ html, .body {background:#cce; margin:0; padding:0; font-family:sans-serif;}
 .todo-task {border-bottom:1px solid grey; display:flex;  justify-content: space-around; align-items: stretch; }
 .todo-desc {display:inline-block; padding:10px; border:1px solid #ddd; margin:10px; width:70%; display:flex; }
 .todo-edit, .todo-delete {width:120px; display:flex; 0 0 120px; justify-content: center; align-items:center; font-weight:bold;}
+.todo-edit-active {border:4px solid red;}
