@@ -18,6 +18,7 @@ let editTask = (evt) => {
 /* click handler for delete buttons */
 let deleteTask = (evt) => {
   conLog (`Delete clicked... for ${evt.target.parentNode.className}`);
+  let task = evt.target.parentNode.remove();
 }
 
 /* encapsulated function to add eventListening to elements 
