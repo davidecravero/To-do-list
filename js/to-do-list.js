@@ -160,9 +160,6 @@ enterButton.addEventListener("click",addListAfterClick);
 
 
 
-// #keyup function for keyboard event
-
-
 var checkboxInput = document.getElementsByClassName('checkboxInput');
 document.addEventListener('click', function(e){
 if(event.target.matches ('.checkboxInput')) {
@@ -176,5 +173,5 @@ if(event.target.matches ('.checkboxInput')) {
 
 })
 
-// addTodoButton.addEventListener('click', addTodo);
+
 inputFlexContainer.addEventListener('keyup', keyUp);
