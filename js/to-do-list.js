@@ -10,6 +10,11 @@ let conLog = (msg) => {
 
 /* click handler for add buttons */
 let addTask = (e) => {
+
+  if(inputFlexContainer.value === "") {
+    alert("Please enter item!");
+    return;
+  }
   // conLog (`Add clicked... for ${e.target.parentNode.firstElementChild.className}`);
 
   // ##creative wrapper for each todo-item
@@ -41,6 +46,7 @@ let addTask = (e) => {
   editIcon.classList = "edit-button";
   editIcon.src = "img/edit.svg";
   todosTask.appendChild(editIcon);
+  addEventByObj(editIcon,"click",editTask);
 
   // Adding the delete X icon
 
