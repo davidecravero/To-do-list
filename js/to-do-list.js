@@ -1,7 +1,7 @@
 const debugOutput=true;
 let addTodoButton = document.getElementById('addTodoButton');
 let inputFlexContainer = document.getElementById('addTodo');
-var parentTodoElement = document.getElementsByClassName('todos-tasks')[0];
+let parentTodoElement = document.getElementsByClassName('todos-tasks')[0];
 
 /* wrapper for console.log to be able to globally enable/disable output */
 let conLog = (msg) => {
@@ -48,6 +48,7 @@ let addTask = (e) => {
   deleteIcon.classList = "delete-button";
   deleteIcon.src = "img/x.svg";
   todosTask.appendChild(deleteIcon);
+  addEventByObj(deleteIcon,"click",deleteTask);
 
 
   inputFlexContainer.value = "";
@@ -71,6 +72,7 @@ let deleteTask = (evt) => {
   conLog (`Delete clicked... for ${evt.target.parentNode.className}`);
   let task = evt.target.parentNode.remove();
 }
+
 
 /* encapsulated function to add eventListening to elements
    (you can call it directly if you only assign it to one new element)
@@ -102,6 +104,7 @@ let initializeTodolist = () => {
 
 /* code should be executed after DOM is fully loaded */
 document.addEventListener("DOMContentLoaded", initializeTodolist);
+
 
 
 
