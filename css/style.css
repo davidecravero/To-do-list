@@ -1,8 +1,20 @@
-html, .body {background:#cce; margin:0; padding:0; font-family:sans-serif;}
+html,
+.body {
+  background: #cce;
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
 /* .todo-header, .todo-list {display:block; background:white; max-width:900px; border:1px solid black; margin:10px auto; padding:0px; box-shadow:3px 3px 6px rgba(0,0,0,0.5);}
 .todo-header h1 {padding:0px 10px;} */
 /* .todo-task {border-bottom:1px solid grey; display:flex;  justify-content: space-around; align-items: stretch; } */
-.todo-desc { padding:10px; border:1px solid #ddd; margin:10px; width:70%;}
+.todo-desc,
+.todo-desc-add {
+  padding: 10px;
+  border: 1px solid #ddd;
+  margin: 10px;
+  width: 70%;
+}
 /* .todo-edit, .todo-delete {width:120px; display:flex; 0 0 120px; justify-content: center; align-items:center; font-weight:bold;}
 .todo-edit-active {border:4px solid red;} */
 
@@ -10,10 +22,6 @@ html {
   background: #4fa2be;
   background-size: contain;
   background-repeat: no-repeat;
-
-
-
-
 }
 .app-titles-container {
   text-align: center;
@@ -27,18 +35,12 @@ html {
 
   width: 100%;
   height: 100%;
-
-
-
-
-
-
 }
 
-
-.todo-desc {
+.todo-desc,
+.todo-desc-add {
   border-radius: 1em;
-  border:3px solid #41869e;
+  border: 3px solid #41869e;
 }
 h1 {
   color: white;
@@ -47,21 +49,20 @@ h1 {
 
 h2 {
   color: #6dc496;
-  text-align:center;
+  text-align: center;
 }
 .input-flex-container {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-bottom:2em;
+  margin-bottom: 2em;
 }
 
 .input-flex-container input {
   background-color: #5db7cd;
-
 }
 h3 {
-  color:#82b88c;
+  color: #82b88c;
 }
 
 .todos-tasks {
@@ -69,17 +70,12 @@ h3 {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-
 }
-
 
 .todos-task {
   display: flex;
   justify-content: center;
   align-items: center;
-
-
-
 }
 
 .todos input {
@@ -90,16 +86,17 @@ h3 {
   margin-left: 0.5em;
 }
 
-.edit-button, .delete-button {
-  width:55px;
-  height:45px;
+.edit-button,
+.delete-button {
+  width: 55px;
+  height: 45px;
 }
 
 .text-strike-through {
   text-decoration: line-through;
-  padding:10px;
-  margin:10px;
-  width:70%;
+  padding: 10px;
+  margin: 10px;
+  width: 70%;
   border-radius: 1em;
-  border:3px solid #41869e;
+  border: 3px solid #41869e;
 }
