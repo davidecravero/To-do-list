@@ -55,12 +55,12 @@ let addTask = (e) => {
 
   inputFlexContainer.value = "";
 };
-let keyUp = (evt) => {
-  if (evt.key === "Enter" || evt.keyCode === 13) {
-    addTask();
-    inputFlexContainer.value = "";
-  }
-};
+// let keyUp = (e) => {
+//   if (e.key === "Enter" || e.keyCode === 13) {
+//     addTask();
+//     inputFlexContainer.value = "";
+//   }
+// };
 
 /* wip */
 let endEditing = (evt) => {
@@ -71,9 +71,14 @@ let editTask = (evt) => {
   conLog(`Edit clicked... for ${evt.target.parentNode.className}`);
   /* this is where the new code goes */
   let taskElement = evt.target.parentNode;
+  let checkboxProperty = taskElement.getElementsByClassName('checkboxInput')[0];
+  if(checkboxProperty.checked === true){
+    alert("Make sure to uncheck crossed item.");
+  } else {
   let inputField = taskElement.getElementsByClassName("todo-desc")[0];
   inputField.removeAttribute("readonly");
   inputField.focus();
+}
 
   // keyUp();
   // inputField.setAttribute("readonly");
@@ -177,7 +182,11 @@ document.addEventListener("click", function (e) {
       e.target.parentNode.firstElementChild.classList = "todo-desc";
     }
   }
-});
+  // if (e.target.matches('.todo-desc')) {
+  //
+  //    e.target.removeAttribute('readonly', true);
+  //  }
+ });
 
 document.addEventListener("change", (event) => {
   if (event.target.matches(".todo-desc")) {
@@ -185,4 +194,22 @@ document.addEventListener("change", (event) => {
   }
 });
 
-document.addEventListener("keyup", keyUp);
+function updateInput(){
+
+}
+
+document.addEventListener("keyup", function(e){
+  if(e.target.matches('#addTodo')){
+    if (e.key === "Enter" || e.keyCode === 13) {
+      addTask();
+      inputFlexContainer.value = "";
+    }
+  } else if (e.target.matches('.todo-desc')) {
+     if (e.key === "Enter" || e.keyCode === 13) {
+      e.target.setAttribute('readonly', true);
+    }
+  }
+});
+
+//if the class is the first input, its gonna run the alert
+//if the class is the second one it is gonna make the input change
